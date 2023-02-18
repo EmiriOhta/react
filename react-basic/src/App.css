@@ -1,0 +1,123 @@
+* {
+  font-family: serif;
+}
+#root, html {
+  background-color: #101010;
+}
+/* title */
+.title {
+  color: rgb(216, 209, 200);
+  font-size: 28px;
+}
+
+/* header */
+.header a{
+  color: rgb(235, 230, 224);
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+
+.header a:hover {
+  color: rgb(255, 244, 159);
+  text-shadow:
+   0 0 30px,
+   1px 1px 30px
+}
+.header a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 244, 159);
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: left top;/*左上基点*/
+}
+
+.header a:hover::after {
+  transform: scale(1,1);
+}
+
+/* footer */
+.footer p {
+  color: rgb(72, 72, 72);
+}
+
+/* home */
+.hometext {
+  color: rgb(72, 72, 72);
+  font-size: calc(1.5rem + 3vw);
+  line-height: 1.5;
+  background-image: url(./img/IMG_2437.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 11vw;
+}
+
+/* profile */
+.profileContent {
+  background-image: url(./img/back.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  max-width: 640px;
+}
+
+.profileContent h1 {
+  color: #666;
+  font-size: 32px;
+}
+
+.profile dt {
+  font-weight: lighter;
+  color: #777;
+}
+
+.profile dd {
+  font-weight: bold;
+  color: #666;
+  line-height: 2rem;
+  font-size: 0.9em;
+}
+
+.profile dt, .profile dd {
+  margin-top: 2.5vh;
+}
+
+/* about */
+.article h2, .skillhead, .skilltext{
+  color: rgb(255, 244, 159);
+  text-shadow: 0 0 2px;
+}
+
+.article p {
+  color: rgb(85, 85, 85);
+  background-color: #191919;
+  padding: 20px;
+  line-height: 2em;
+  border-radius: 10px;
+}
+
+.box {
+  display: flex;
+}
+.box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.box{
+  align-items: center;
+}
+
+/* skills */
+.skillimg {
+  width: 55%;
+}
+
+/* contact */
+.contactName {
+  font-size: 1em;
+  color: #888;
+}
